@@ -3,7 +3,9 @@
 @section('content')
     <div class="movie-info border-p border-gray-800">
         <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row">
-            <img src="https://c4.wallpaperflare.com/wallpaper/153/860/948/movie-poster-star-wars-star-wars-the-rise-of-skywalker-2019-year-movies-hd-wallpaper-preview.jpg" alt="" class="w-26 md:w-96">
+            <div class="flex-none">
+                <img src="https://c4.wallpaperflare.com/wallpaper/153/860/948/movie-poster-star-wars-star-wars-the-rise-of-skywalker-2019-year-movies-hd-wallpaper-preview.jpg" alt="" class="w-26 md:w-96">
+            </div>
             <div class="md:ml-24">
                 <h2 class="text-4xl font-semibold">Star Wars The Rise of Skywalker (2019)</h2>
                     <div class="flex flex-wrap items-center text-gray-400 text-sm">
