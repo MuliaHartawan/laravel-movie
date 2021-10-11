@@ -45,7 +45,7 @@ class ViewMoviesTest extends TestCase
 
     private function fakePopularMovies()
     {
-        return Http:respone([
+        return Http::respone([
             'results' => [
                 [
                     "popularity" => 406.677,
@@ -75,7 +75,7 @@ class ViewMoviesTest extends TestCase
 
     private function fakeNowPlayingMovies()
     {
-        return Http:respone([
+        return Http::respone([
             'results' => [
                 [
                     "popularity" => 406.677,
