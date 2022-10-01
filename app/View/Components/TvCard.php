@@ -7,14 +7,16 @@ use Illuminate\View\Component;
 class TvCard extends Component
 {
     public $tvshow;
+    public $genres;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($tvshow)
+    public function __construct($tvshow, $genres)
     {
         $this->tvshow = $tvshow;
+        $this->genres = $genres;
     }
 
     /**
