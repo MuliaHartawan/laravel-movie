@@ -24,10 +24,10 @@
                         </svg></a>
                 </li>
                 <li class="md:ml-16 mt-3 md:md-mt-0">
-                    <a href="#" class="hover:text-gray-300">Movie</a>
+                    <a href="" class="hover:text-gray-300">Movie</a>
                 </li>
                 <li class="md:ml-16 mt-3 md:md-mt-0">
-                    <a href="#" class="hover:text-gray-300">Tv Shows</a>
+                    <a href="{{ route('tv.index') }}" class="hover:text-gray-300">Tv Shows</a>
                 </li>
                 <li class="md:ml-16 mt-3 md:md-mt-0">
                     <a href="#" class="hover:text-gray-300">Actors</a>
