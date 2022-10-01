@@ -20,4 +20,4 @@ use App\Http\Controllers\MoviesController;
 // });
 
 Route::get('/', [MoviesController::class, 'index']);
-Route::get('/movies/{movies}', [MoviesController::class, 'show']);
+Route::get('/movies/{movies}', [MoviesController::class, 'show'])->name('movies.show');
