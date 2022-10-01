@@ -29,32 +29,11 @@ class MoviesController extends Controller
         $genre = collect($genreMovie)->mapWithKeys(function ($genre) {
             return [$genre['id'] => $genre['name']];
         });
-        return view('index', [
+        return view('movies.index', [
             'popularMovies' => $moviesPopular,
             'nowPlayingMovie' => $nowPlayingMovie,
             'genres' => $genre,
         ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
     }
 
     /**
@@ -68,42 +47,8 @@ class MoviesController extends Controller
         $movie = Http::withToken(config('services.tmdb.token'))
             ->get('https://api.themoviedb.org/3/movie/' . $id . '?append_to_response=videos,images,credits')
             ->json();
-        return view('show', [
+        return view('movies.show', [
             'movie' => $movie
         ]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }
