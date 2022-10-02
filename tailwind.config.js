@@ -9,8 +9,11 @@ module.exports = {
   theme: {
     extend: {
         width : {
-            '96' : '24rem',
-        }
+          '96' : '24rem',
+        },
+        margin : {
+            '50' : '12.5rem',
+        } 
     },
   },
   variants: {
