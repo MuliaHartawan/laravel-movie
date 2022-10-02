@@ -33,21 +33,17 @@
                     <a href="#" class="hover:text-gray-300">Actors</a>
                 </li>
             </ul>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="relative mt-3 md:md-mt-0">
+            <div class="flex flex-col md:flex-row items-center gap-4 lg:gap-0">
+                <div class="relative mt-3 md:mt-0">
                     <input type="text"
                         class="bg-gray-800 rounded-full w-64 px-4 pl-8 py-1
                     focus:outline-none focus:shadow-outline"
                         placeholder="Search">
                 </div>
                 <div class="absolute top-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:mt-12 md:ml-3 my-52 mr-56 text-gray-500"
-                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
+                    <svg class="fill-current mt-50 w-4 text-gray-500 mr-56 md:mr-0 md:mt-10 ml-2" viewBox="0 0 24 24"><path class="heroicon-ui" d="M16.32 14.9l5.39 5.4a1 1 0 01-1.42 1.4l-5.38-5.38a8 8 0 111.41-1.41zM10 16a6 6 0 100-12 6 6 0 000 12z"/></svg>
                 </div>
-                <div class="md:ml-4 mt-3 md:md-mt-0">
+                <div class="md:ml-4 md:md-mt-0">
                     <a href="#">
                         <img src="/img/avatar.jpg" alt="avatar" class="rounded-full w-8 h-8">
                     </a>
