@@ -9,6 +9,7 @@
 
 
     <link rel="stylesheet" href="/css/app.css">
+    @livewireStyles
 </head>
 
 <body class="font-sans bg-gray-900 text-white">
@@ -91,6 +92,7 @@
             </a>
         </div>
     </footer>
+    @livewireScripts
 </body>
 
 </html>
