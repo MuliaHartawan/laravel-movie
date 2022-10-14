@@ -1,8 +1,13 @@
-<div class="relative mt-3 md:mt-0">
+<div class="relative mt-3 md:mt-0" x-data="{ isOpen : true }" @click.outside="isOpen = false">
     <input type="text" wire:model.debounce.500ms="search"
         class="bg-gray-800 rounded-full w-64 px-4 pl-8 py-1
         focus:outline-none focus:shadow-outline"
-        placeholder="Search">
+        placeholder="Search"
+        @focus = "isOpen = true"
+        @keydown = "isOpen = true"
+        @keydown.escape.window = "isOpen = false"
+        @keydown.shift.tab = "isOpen = false"
+        >
     <div class="absolute top-0">
         <svg class="fill-current mt-2 w-4 text-gray-500 ml-2" viewBox="0 0 24 24">
             <path class="heroicon-ui"
@@ -13,13 +18,21 @@
     <div wire:loading class="spinner top-0 right-0 mr-6 mt-4"></div>
 
     @if (strlen($search) >= 2)
-        <div class="absolute bg-gray-800 text-sm rounded w-64 mt-4 shadow-lg">
+        <div 
+            class="z-50 absolute bg-gray-800 text-sm rounded w-64 mt-4 shadow-lg" 
+            x-show.transition.opacity="isOpen"  
+        >
             @if ($searchResults->count() > 0)
                 <ul>
                     @foreach ($searchResults as $result)
                         <li class="border-b border-gray-700">
-                            <a href="{{ route('movies.show', $result['id']) }}"
-                                class="block hover:bg-gray-700 px-3 py-3 flex items-center transition ease-in-out duration-150">
+                            <a 
+                                href="{{ route('movies.show', $result['id']) }}"
+                                class="block hover:bg-gray-700 px-3 py-3 flex items-center transition ease-in-out duration-150"
+                                @if ($loop->last)
+                                    @keydown.tab= "isOpen = false"
+                                @endif
+                                >
                                 @if ($result['poster_path'])
                                     <img src="https://image.tmdb.org/t/p/w92/{{ $result['poster_path'] }}"
                                         alt="poster" class="w-8">

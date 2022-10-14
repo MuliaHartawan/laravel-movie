@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="/css/app.css">
     @livewireStyles
+    <script defer src="https://unpkg.com/alpinejs@3.10.4/dist/cdn.min.js"></script>
 </head>
 
 <body class="font-sans bg-gray-900 text-white">
